@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AMr-6K-7Bs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Defaults View Controller-->
+        <scene sceneID="Cr9-mx-nbq">
+            <objects>
+                <viewController id="AMr-6K-7Bs" customClass="UserDefaultsViewController" customModule="Swift_UserDefaults" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rMb-XD-n1A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvb-0U-AU2">
+                                <rect key="frame" x="140" y="210" width="95" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="saveButtonHandler:" destination="AMr-6K-7Bs" eventType="touchUpInside" id="pOb-ht-p7g"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nJ9-Jv-7Fo">
+                                <rect key="frame" x="140" y="140" width="95" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="4WX-uo-TdP">
+                                <rect key="frame" x="40" y="280" width="295" height="30"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="独自クラスの保存">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="toOriginalButtonHandler:" destination="AMr-6K-7Bs" eventType="touchUpInside" id="xj3-Pp-s50"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4WX-uo-TdP" firstAttribute="leading" secondItem="NTw-2K-zLI" secondAttribute="leading" constant="40" id="1wk-32-TVj"/>
+                            <constraint firstItem="NTw-2K-zLI" firstAttribute="trailing" secondItem="hvb-0U-AU2" secondAttribute="trailing" constant="140" id="6P2-gb-B8v"/>
+                            <constraint firstItem="NTw-2K-zLI" firstAttribute="trailing" secondItem="4WX-uo-TdP" secondAttribute="trailing" constant="40" id="Df1-a4-vO0"/>
+                            <constraint firstItem="nJ9-Jv-7Fo" firstAttribute="top" secondItem="NTw-2K-zLI" secondAttribute="top" constant="120" id="Pr3-8f-StH"/>
+                            <constraint firstItem="4WX-uo-TdP" firstAttribute="top" secondItem="hvb-0U-AU2" secondAttribute="bottom" constant="40" id="VDY-fO-Apc"/>
+                            <constraint firstItem="hvb-0U-AU2" firstAttribute="top" secondItem="nJ9-Jv-7Fo" secondAttribute="bottom" constant="40" id="WyD-GH-ZTp"/>
+                            <constraint firstItem="hvb-0U-AU2" firstAttribute="leading" secondItem="NTw-2K-zLI" secondAttribute="leading" constant="140" id="XI7-jz-R1Q"/>
+                            <constraint firstItem="NTw-2K-zLI" firstAttribute="trailing" secondItem="nJ9-Jv-7Fo" secondAttribute="trailing" constant="140" id="dIh-Od-zGT"/>
+                            <constraint firstItem="nJ9-Jv-7Fo" firstAttribute="leading" secondItem="NTw-2K-zLI" secondAttribute="leading" constant="140" id="rZH-Vw-ouT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NTw-2K-zLI"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="nJ9-Jv-7Fo" id="hwU-6S-GOv"/>
+                        <outlet property="saveButton" destination="hvb-0U-AU2" id="Dpf-V5-IaH"/>
+                        <outlet property="viewChangeButton" destination="4WX-uo-TdP" id="Z4L-4F-7Ut"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZFZ-aA-ZKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="40.929535232383813"/>
+        </scene>
+    </scenes>
+</document>
